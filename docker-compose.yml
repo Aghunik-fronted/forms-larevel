@@ -16,7 +16,7 @@ services:
             - MYSQL_USER=user
             - MYSQL_PASSWORD=123
         ports:
-            - '4003:3306' # ИСПРАВЛЕНО: изменен порт 4002 -> 4003, чтобы избежать конфликта
+            - '4003:3306' 
 
     webserver:
         image: 'nginx:alpine'
