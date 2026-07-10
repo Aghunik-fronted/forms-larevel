@@ -1,7 +1,6 @@
 ###############################################################################
 #                          Generated on phpdocker.io                          #
 ###############################################################################
-version: '3.1'
 services:
     memcached:
         image: 'memcached:alpine'
@@ -17,7 +16,7 @@ services:
             - MYSQL_USER=user
             - MYSQL_PASSWORD=123
         ports:
-            - '4002:3306'
+            - '4003:3306' # ИСПРАВЛЕНО: изменен порт 4002 -> 4003, чтобы избежать конфликта
 
     webserver:
         image: 'nginx:alpine'
